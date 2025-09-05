@@ -1,4 +1,4 @@
-const { sumar, multiplicar, saludar } = require("./index");
+const { sumar, multiplicar, saludar, restar } = require("./index");
 
 function runTests() {
     let passed = 0;
@@ -28,6 +28,15 @@ function runTests() {
         passed++;
     } else {
         console.log('Test saludo: FALLO');
+        failed++;
+    }
+
+    // Test 4: Restar
+    if (restar(10, 5) === 5) {
+        console.log('Test restar: PASO');
+        passed++;
+    } else {
+        console.log('Test restar: FALLO');
         failed++;
     }
 
