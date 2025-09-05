@@ -1,0 +1,11 @@
+{
+    "name": "github-actions-practice",
+    "version": "1.0.0",
+    "description": "Práctica de GitHub Actions",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test.js",
+        "lint": "echo 'Ejectuando linter...' && node lint.js"
+    },
+    "author": "Diego Orozco"
+}

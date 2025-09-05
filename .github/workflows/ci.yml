@@ -1,0 +1,40 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Ejecutar tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Ejectutar pruebas
+        run: npm test
+
+      - name: Verificar estilo
+        run: npm run lint
+  
+  info:
+    name: Informacion del sistema
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar informacion
+        run: |
+          echo "Ejecutandose en: ${{ runner.os }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Mensaje del commit: ${{ github.event.head_commit.message }}"
+          date
