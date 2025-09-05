@@ -14,7 +14,7 @@ function runTests() {
     }
 
     // Test 2: Multplicar
-    if (multiplicar(4*5) === 20) {
+    if (multiplicar(4, 5) === 20) {
         console.log('Test multiplicacion: PASO');
         passed++;
     } else {
