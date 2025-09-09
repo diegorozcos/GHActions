@@ -14,4 +14,8 @@ function saludar(nombre) {
     return `¡Hola, ${nombre}!`;
 }
 
-module.exports = { sumar, multiplicar, saludar, restar };
+function exponente(a, b) {
+    return a ** b;
+}
+
+module.exports = { sumar, multiplicar, saludar, restar, exponente };
