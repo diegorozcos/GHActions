@@ -50,7 +50,7 @@ function runTests() {
     }
 
     // Test exponente
-    if (exponente(3, 3) === 9) {
+    if (exponente(3, 3) === 27) {
         console.log('Test exponente: PASO');
         passed++;
     } else {
