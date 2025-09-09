@@ -40,6 +40,15 @@ function runTests() {
         failed++;
     }
 
+    // New test
+    if (sumar(4, 5) === 9) {
+        console.log('Test 2 suma: PASO');
+        passed++;
+    } else {
+        console.log('Test 2 suma: FALLO');
+        failed++;
+    }
+
     console.log(`\nResultados: ${passed} pasaron, ${failed} fallaron`);
 
     if (failed > 0) {
