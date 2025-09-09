@@ -1,4 +1,4 @@
-const { sumar, multiplicar, saludar, restar } = require("./index");
+const { sumar, multiplicar, saludar, restar, exponente } = require("./index");
 
 function runTests() {
     let passed = 0;
@@ -46,6 +46,15 @@ function runTests() {
         passed++;
     } else {
         console.log('Test 2 suma: FALLO');
+        failed++;
+    }
+
+    // Test exponente
+    if (exponente(3, 3) === 9) {
+        console.log('Test exponente: PASO');
+        passed++;
+    } else {
+        console.log('Test exponente: FALLO');
         failed++;
     }
 
